@@ -1,0 +1,19 @@
+﻿  main.cpp
+  math_utils.cpp
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\math_utils.cpp(45,31): warning C4244: 'argument': conversion from 'unsigned __int64' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=unsigned int
+          ]
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\math_utils.cpp(59,31): warning C4244: 'argument': conversion from 'unsigned __int64' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=unsigned int
+          ]
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\math_utils.cpp(70,23): warning C4018: '<': signed/unsigned mismatch
+  solver.cpp
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\solver.cpp(53,31): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\solver.cpp(55,34): warning C4018: '>': signed/unsigned mismatch
+C:\Users\a389s\OneDrive\Documents\coding\euler_project\euler\solver.cpp(57,27): warning C4018: '>': signed/unsigned mismatch
+  Generating Code...
+  euler.vcxproj -> C:\Users\a389s\OneDrive\Documents\coding\euler_project\Debug\euler.exe
