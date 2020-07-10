@@ -18,3 +18,13 @@ void prime_factor_decomposition(
  *  Determines whether the given number is a palindrome.
  */
 bool is_palindrome(unsigned long long num);
+
+/**
+ *  Calculates the least common multiple of given numbers.
+ */
+unsigned long long least_common_multiple(std::vector<unsigned int>& factors);
+
+/**
+ *  Calculates the least common multiple of given numbers.
+ */
+std::vector<unsigned long long> get_factors(unsigned long long num);

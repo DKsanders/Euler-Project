@@ -2,6 +2,7 @@
 #include "math_utils.h"
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 bool is_prime(unsigned long long num)
 {
@@ -75,4 +76,53 @@ bool is_palindrome(unsigned long long num)
         }
     }
     return true;
+}
+
+unsigned long long least_common_multiple(std::vector<unsigned int>& factors)
+{
+    std::unordered_map<unsigned int, unsigned int> prime_to_highest_power;
+    for (auto factor : factors)
+    {
+        std::vector<unsigned int> primes;
+        std::vector<unsigned int> powers;
+        prime_factor_decomposition(factor, primes, powers);
+
+        for (int i = 0; i < primes.size(); ++i)
+        {
+            unsigned int prime = primes[i];
+            unsigned int power = powers[i];
+            auto iter = prime_to_highest_power.find(prime);
+            if (iter == prime_to_highest_power.end())
+            {
+                prime_to_highest_power[prime] = power;
+            }
+            else
+            {
+                if (power > iter->second)
+                {
+                    prime_to_highest_power[prime] = power;
+                }
+            }
+        }
+    }
+
+    unsigned long long lcm = 1;
+    for (auto iter : prime_to_highest_power)
+    {
+        lcm = lcm * pow(iter.first, iter.second);
+    }
+    return lcm;
+}
+
+std::vector<unsigned long long> get_factors(unsigned long long num)
+{
+    std::vector<unsigned long long> factors;
+    for (unsigned long long i = 1; i <= num; ++i)
+    {
+        if (num % i == 0)
+        {
+            factors.push_back(i);
+        }
+    }
+    return factors;
 }

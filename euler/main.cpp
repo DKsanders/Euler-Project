@@ -5,7 +5,7 @@
 int main()
 {
     Solver solver;
-    solver.problem4();
+    solver.problem12();
 
     return 0;
 }
