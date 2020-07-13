@@ -28,3 +28,8 @@ unsigned long long least_common_multiple(std::vector<unsigned int>& factors);
  *  Calculates the least common multiple of given numbers.
  */
 std::vector<unsigned long long> get_factors(unsigned long long num);
+
+/**
+ *  Calculates the least common multiple of given numbers.
+ */
+unsigned int get_num_factors(unsigned long long num);

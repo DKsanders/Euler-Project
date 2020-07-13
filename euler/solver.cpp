@@ -1,5 +1,6 @@
 #include <vector>
 #include <string>
+#include <cmath>
 
 #include "solver.h"
 #include "math_utils.h"
@@ -320,9 +321,8 @@ void Solver::problem12()
     for (int i = 1; true; ++i)
     {
         triangle_num += i;
-        std::vector<unsigned long long> const& factors = get_factors(triangle_num);
-        std::cout << triangle_num << std::endl;
-        if (factors.size() > 500)
+        unsigned int num_factors = get_num_factors(triangle_num);
+        if (num_factors > 500)
         {
             break;
         }

@@ -126,3 +126,18 @@ std::vector<unsigned long long> get_factors(unsigned long long num)
     }
     return factors;
 }
+
+unsigned int get_num_factors(unsigned long long num)
+{
+    std::vector<unsigned int> factors;
+    std::vector<unsigned int> powers;
+
+    prime_factor_decomposition(num, factors, powers);
+    
+    unsigned int num_factors = 1;
+    for (auto n : powers)
+    {
+        num_factors *= (n + 1);
+    }
+    return num_factors;
+}
